@@ -9,4 +9,4 @@ void Init_Timer()
 	TCCR0 = 0;
 	TIFR = 0x1;  		/* Clear TOV0 flag*/
 	
-	}
+}
