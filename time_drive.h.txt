@@ -1,0 +1,12 @@
+
+
+void Init_Timer()
+{
+	TCNT0 = 0x25;  		/* Load TCNT0*/
+	TCCR0 = 0x01;  		/* Timer0, normal mode, no pre-scalar */
+	
+	while((TIFR&0x01)==0);  /* Wait for TOV0 to roll over */
+	TCCR0 = 0;
+	TIFR = 0x1;  		/* Clear TOV0 flag*/
+	
+	}

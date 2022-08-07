@@ -16,7 +16,6 @@
 
  void SWUART_init(uint32_t baudrate);
  {
-	 	// baud rate 9600, F_CPU = 7382800hz
 	UBRRH = (baudrate>>8);                      // shift the register right by 8 bits
 	UBRRL = baudrate;                           // set baud rate
 	UCSRB = (1<<TXEN)|(1<<RXEN);
