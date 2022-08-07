@@ -33,7 +33,6 @@
 
  void SWUART_recieve(uint8_t *data);
  {
-	 	for(uint8_t i = 0; *(data+i) != '\0'; i++)
-		Uart_Write(*(data+i));
-	 
+	while ( !(UCSRA & (1<<RXC)) );
+	*data = UDR;
  }
