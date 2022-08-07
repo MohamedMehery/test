@@ -19,7 +19,7 @@
 	UBRRH = (baudrate>>8);                      // shift the register right by 8 bits
 	UBRRL = baudrate;                           // set baud rate
 	UCSRB = (1<<TXEN)|(1<<RXEN);
-	UCSRC = (1<<URSEL)| (1<<UCSZ1)|(1<<UCSZ0); // 8bit data format
+	UCSRC = (1<<URSEL)| (1<<UCSZ1)|(1<<UCSZ0) | (UPM1); // 8bit data format with parity
  }
  
  
